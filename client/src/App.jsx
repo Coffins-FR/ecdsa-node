@@ -1,22 +1,16 @@
-import Wallet from "./Wallet";
-import Transfer from "./Transfer";
 import "./App.scss";
-import { useState } from "react";
+import Router from "./Router";
+import { BrowserRouter } from "react-router-dom";
+import { Provider, Viewport } from "@radix-ui/react-toast";
 
 function App() {
-  const [balance, setBalance] = useState(0);
-  const [address, setAddress] = useState("");
-
   return (
-    <div className="app">
-      <Wallet
-        balance={balance}
-        setBalance={setBalance}
-        address={address}
-        setAddress={setAddress}
-      />
-      <Transfer setBalance={setBalance} address={address} />
-    </div>
+    <BrowserRouter className="app">
+      <Provider duration={3000} swipeDirection="right">
+        <Router />
+        <Viewport className="c-toast__viewport" />
+      </Provider>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,21 @@
+.c-navBar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  color: white;
+  font-weight: 700;
+  font-size: x-large;
+}
+
+.c-navBar__element {
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

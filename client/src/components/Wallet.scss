@@ -1,0 +1,48 @@
+.c-wallet {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  color: white;
+  background-color: #37245e;
+  border-radius: 0.4rem;
+  border: 1px solid #c840f5;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    animation: bounce alternate ease-in-out infinite 4s;
+  }
+
+  h1 {
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  input {
+    min-width: 360px;
+    background-color: #472f7a;
+    border: 1px solid transparent;
+    margin-top: 12px;
+    color: white;
+  }
+
+  .balance {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 0.9em;
+    display: inline-flex;
+    margin-top: 10px;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+  }
+}
